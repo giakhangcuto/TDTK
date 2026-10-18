@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Màn hình 2: Chi tiết phòng trọ - TrọSV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #0f172a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Segoe UI', sans-serif; }
+    .phone-frame { width: 375px; height: 780px; background: #ffffff; border-radius: 42px; border: 10px solid #1e293b; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); overflow: hidden; display: flex; flex-direction: column; position: relative; }
+    .notch { width: 150px; height: 24px; background: #1e293b; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <div class="phone-frame">
+    <!-- KHU VỰC 1: Ảnh phòng trọ & Huy hiệu Đã kiểm chứng -->
+    <div class="relative h-60 w-full bg-gray-200">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80" alt="Phòng trọ Quận 10" class="w-full h-full object-cover" />
+      
+      <!-- Thanh trạng thái đè lên ảnh -->
+      <div class="absolute top-0 inset-x-0 pt-1 pb-2 px-6 flex justify-between items-center text-xs font-semibold text-white bg-gradient-to-b from-black/50 to-transparent">
+        <span>9:41</span>
+        <div class="notch -mt-2"></div>
+        <div class="flex gap-1.5 items-center">
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-full text-sm"></i>
+        </div>
+      </div>
+
+      <!-- Nút điều hướng trên ảnh -->
+      <div class="absolute top-9 inset-x-4 flex justify-between items-center">
+        <button class="w-8 h-8 rounded-full bg-white/90 text-gray-800 flex items-center justify-center shadow">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <div class="flex gap-2">
+          <button class="w-8 h-8 rounded-full bg-white/90 text-gray-800 flex items-center justify-center shadow">
+            <i class="fa-solid fa-share-nodes text-sm"></i>
+          </button>
+          <button class="w-8 h-8 rounded-full bg-white/90 text-red-500 flex items-center justify-center shadow">
+            <i class="fa-regular fa-heart text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Huy hiệu ĐÃ KIỂM CHỨNG -->
+      <div class="absolute top-20 left-0 bg-sky-600 text-white text-xs font-extrabold px-3 py-1.5 rounded-r-full shadow-md flex items-center gap-1.5">
+        <span>ĐÃ KIỂM CHỨNG</span>
+        <i class="fa-solid fa-circle-check text-white"></i>
+      </div>
+
+      <!-- Chấm chuyển ảnh (Carousel dots) -->
+      <div class="absolute bottom-3 inset-x-0 flex justify-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-white"></span>
+        <span class="w-2 h-2 rounded-full bg-white/50"></span>
+        <span class="w-2 h-2 rounded-full bg-white/50"></span>
+        <span class="w-2 h-2 rounded-full bg-white/50"></span>
+      </div>
+    </div>
+
+    <!-- Nội dung chi tiết -->
+    <div class="p-4 flex-1 flex flex-col justify-between bg-white">
+      
+      <!-- KHU VỰC 2: Thông tin phòng & Giá thuê -->
+      <div>
+        <h1 class="text-base font-extrabold text-gray-900 uppercase tracking-tight">PHÒNG TRỌ KHÉP KÍN QUẬN 10</h1>
+        <div class="mt-1 flex items-baseline gap-2">
+          <span class="text-lg font-extrabold text-gray-900">3.500.000 đ/tháng</span>
+          <span class="text-xs text-gray-500 font-medium">• Diện tích: 14.4 m²</span>
+        </div>
+        <p class="text-xs text-gray-600 mt-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-gray-500"></i>
+          <span>Địa chỉ: 125/8 Thành Thái, Quận 10</span>
+        </p>
+      </div>
+
+      <!-- KHU VỰC 3: 2 Nút công cụ bảo vệ cốt lõi (AR & Video Call 1x) -->
+      <div class="space-y-2.5 my-2">
+        <button class="w-full bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 text-white rounded-xl py-2.5 px-4 shadow-md flex items-center justify-center gap-3 transition transform active:scale-95">
+          <i class="fa-solid fa-ruler-combined text-xl"></i>
+          <div class="text-left">
+            <div class="text-sm font-extrabold uppercase leading-tight">ĐO KÍCH THƯỚC AR</div>
+            <div class="text-[11px] text-purple-100">(Xem phòng thực tế)</div>
+          </div>
+        </button>
+
+        <button class="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white rounded-xl py-2.5 px-4 shadow-md flex items-center justify-center gap-3 transition transform active:scale-95">
+          <i class="fa-solid fa-video text-xl"></i>
+          <div class="text-left">
+            <div class="text-sm font-extrabold uppercase leading-tight">VIDEO CALL XÁC THỰC 1X</div>
+            <div class="text-[11px] text-sky-100">(Chống lừa đảo)</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- KHU VỰC 4: Tiện ích & Bản đồ -->
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-bold text-gray-800 uppercase">Tiện ích & Vị trí</span>
+          <span class="text-[11px] text-sky-600 font-semibold cursor-pointer"><i class="fa-regular fa-map mr-1"></i>Xem bản đồ</span>
+        </div>
+        <div class="grid grid-cols-4 gap-2 text-center">
+          <div class="bg-gray-50 border border-gray-100 rounded-xl p-2">
+            <i class="fa-solid fa-wifi text-purple-600 text-sm"></i>
+            <div class="text-[10px] font-semibold text-gray-700 mt-1">WiFi</div>
+          </div>
+          <div class="bg-gray-50 border border-gray-100 rounded-xl p-2">
+            <i class="fa-solid fa-snowflake text-sky-500 text-sm"></i>
+            <div class="text-[10px] font-semibold text-gray-700 mt-1">Máy lạnh</div>
+          </div>
+          <div class="bg-gray-50 border border-gray-100 rounded-xl p-2">
+            <i class="fa-regular fa-clock text-amber-500 text-sm"></i>
+            <div class="text-[10px] font-semibold text-gray-700 mt-1">Giờ tự do</div>
+          </div>
+          <div class="bg-gray-50 border border-gray-100 rounded-xl p-2">
+            <i class="fa-solid fa-video text-emerald-600 text-sm"></i>
+            <div class="text-[10px] font-semibold text-gray-700 mt-1">Camera</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KHU VỰC 5: Thông tin Chủ trọ uy tín -->
+      <div class="border-t border-gray-200 pt-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80" alt="Cô Lan Anh" class="w-11 h-11 rounded-full object-cover border-2 border-emerald-500" />
+          <div>
+            <div class="text-xs font-bold text-gray-900 flex items-center gap-1">
+              <span>Cô Lan Anh</span>
+              <span class="text-emerald-600 font-semibold">(Chủ trọ uy tín <i class="fa-solid fa-circle-check"></i>)</span>
+            </div>
+            <div class="text-[11px] text-gray-500 flex items-center gap-1 mt-0.5">
+              <i class="fa-solid fa-star text-amber-400"></i>
+              <span class="font-bold text-gray-800">4.9</span>
+              <span>(124 đánh giá) • Phản hồi 100%</span>
+            </div>
+          </div>
+        </div>
+        <button class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+          <i class="fa-solid fa-phone-volume text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
